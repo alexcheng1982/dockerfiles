@@ -48,3 +48,9 @@ RUN chmod +x /etc/my_init.d/start-pio.sh
 RUN pip install --upgrade pip \
     && pip install setuptools \
     && pip install predictionio
+
+ENV ENGINE_HOME /opt/engine
+
+RUN mkdir -p $ENGINE_HOME
+VOLUME $ENGINE_HOME
+WORKDIR $ENGINE_HOME    
