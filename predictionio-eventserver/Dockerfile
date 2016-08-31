@@ -2,7 +2,7 @@ FROM phusion/baseimage
 MAINTAINER Fu Cheng <alexcheng1982@gmai.com>
 
 ENV PIO_VERSION 0.9.6
-ENV SPARK_VERSION 1.5.1
+ENV SPARK_VERSION 1.6.2
 
 ENV PIO_HOME /PredictionIO-${PIO_VERSION}
 ENV PATH=${PIO_HOME}/bin:$PATH
@@ -20,7 +20,7 @@ COPY files/pio-env.sh ${PIO_HOME}/conf/pio-env.sh
 
 RUN curl -O http://d3kbcqa49mib13.cloudfront.net/spark-${SPARK_VERSION}-bin-hadoop2.6.tgz \
     && tar -xvzf spark-${SPARK_VERSION}-bin-hadoop2.6.tgz -C ${PIO_HOME}/vendors \
-    && rm spark-${SPARK_VERSION}-bin-hadoop2.6.tgz 
+    && rm spark-${SPARK_VERSION}-bin-hadoop2.6.tgz
 
 RUN ${PIO_HOME}/sbt/sbt -batch
 
