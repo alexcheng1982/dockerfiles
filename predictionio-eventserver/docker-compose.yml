@@ -1,0 +1,19 @@
+version: '2'
+services:
+  pio:
+    image: alexcheng/predictionio-eventserver
+    env_file: env
+    ports:
+      - '9070:7070'
+    links:
+      - db
+  db:
+    image: mysql:5.7.14
+    env_file: env
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    ports:
+      - "8380:80"
+    links:
+      - db
