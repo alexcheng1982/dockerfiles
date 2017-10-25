@@ -1,4 +1,4 @@
-FROM phusion/baseimage:0.9.18
+FROM phusion/baseimage:0.9.22
 
 # phpize deps
 RUN apt-get update && apt-get install -y \
@@ -42,9 +42,9 @@ ENV PHP_EXTRA_CONFIGURE_ARGS --with-apxs2
 
 ENV GPG_KEYS 1A4E8B7277C42E53DBA9C7B9BCAA30EA9C0D5763
 
-ENV PHP_VERSION 7.0.6
-ENV PHP_FILENAME php-7.0.6.tar.xz
-ENV PHP_SHA256 1b237a9455e5476a425dbb9d99966bad68107747c601958cb9558a7fb49ab419
+ENV PHP_VERSION 7.0.24
+ENV PHP_FILENAME php-7.0.24.tar.xz
+ENV PHP_SHA256 4dba7aa365193c9229f89f1975fad4c01135d29922a338ffb4a27e840d6f1c98
 
 RUN set -xe \
 	&& buildDeps=" \
