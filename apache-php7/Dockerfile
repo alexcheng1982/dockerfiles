@@ -16,6 +16,7 @@ RUN apt-get update && apt-get install -y \
 RUN apt-get update && apt-get install -y \
 		ca-certificates \
 		curl \
+		libcurl3 \
 		libedit2 \
 		libsqlite3-0 \
 		libxml2 \
