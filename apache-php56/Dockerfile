@@ -220,7 +220,7 @@ RUN set -eux; \
 	pecl update-channels; \
 	rm -rf /tmp/pear ~/.pearrc
 
-COPY docker-php-ext-* docker-php-entrypoint /usr/local/bin/
+COPY docker-php-ext-* /usr/local/bin/
 
 COPY apache2-foreground /usr/local/bin/
 WORKDIR /var/www/html
