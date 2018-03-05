@@ -70,7 +70,7 @@ RUN buildDeps=" \
 	&& make clean
 
 COPY docker-php-ext-*  /usr/local/bin/
-RUN chmod +x docker-php-ext-*
+RUN chmod +x /usr/local/bin/docker-php-ext-*
 
 COPY apache2-foreground /usr/local/bin/
 WORKDIR /var/www/html
