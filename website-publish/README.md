@@ -1,5 +1,13 @@
 # Docker image for website publish
 
+[![Docker Repository on Quay](https://quay.io/repository/alexcheng1982/jdk-node-ruby-python/status "Docker Repository on Quay")](https://quay.io/repository/alexcheng1982/jdk-node-ruby-python)
+
+To use this image:
+
+```
+docker pull quay.io/alexcheng1982/jdk-node-ruby-python
+```
+
 This Docker image contains
 * OpenJDK 8
 * Node 8.11.3
