@@ -296,5 +296,16 @@ RUN set -ex; \
 		\) -exec rm -rf '{}' +; \
 	rm -f get-pip.py
 
-RUN apk add build-base libpng-dev pngquant
+RUN apk add --update \
+    bash \
+		build-base \
+    lcms2-dev \
+    libpng-dev \
+    gcc \
+    g++ \
+    make \
+    autoconf \
+    automake \
+		pngquant \
+  && rm -rf /var/cache/apk/*
 RUN apk add vips-dev fftw-dev --update-cache --repository https://dl-3.alpinelinux.org/alpine/edge/testing/
