@@ -31,3 +31,7 @@ RUN echo "===> Installing sudo to emulate normal OS behavior..."  && \
     echo "===> Adding hosts for convenience..."  && \
     mkdir -p /etc/ansible                        && \
     echo 'localhost' > /etc/ansible/hosts
+
+RUN pip install --upgrade pip && \
+  pip install boto3 && \
+  pip install boto
