@@ -1,4 +1,4 @@
-FROM dtzar/helm-kubectl:2.15.0
+FROM dtzar/helm-kubectl:2.14.3
 
 RUN curl -LSs https://github.com/rancher/rke/releases/download/v0.3.1/rke_linux-amd64 > /usr/local/bin/rke
 RUN chmod +x /usr/local/bin/rke
