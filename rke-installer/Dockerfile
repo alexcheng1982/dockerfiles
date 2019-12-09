@@ -1,6 +1,6 @@
-FROM dtzar/helm-kubectl:2.14.3
+FROM dtzar/helm-kubectl:2.16.1
 
-RUN curl -LSs https://github.com/rancher/rke/releases/download/v0.3.1/rke_linux-amd64 > /usr/local/bin/rke
+RUN curl -LSs https://github.com/rancher/rke/releases/download/v1.0.0/rke_linux-amd64 > /usr/local/bin/rke
 RUN chmod +x /usr/local/bin/rke
 
 RUN echo "===> Installing sudo to emulate normal OS behavior..."  && \
