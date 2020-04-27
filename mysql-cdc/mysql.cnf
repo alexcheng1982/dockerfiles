@@ -1,5 +1,6 @@
 [mysqld]
-server-id                   = 1
-log_bin                     = mysql-bin
-binlog_expire_logs_seconds  = 86400
-binlog_format               = row
+default-authentication-plugin = mysql_native_password
+server-id                     = 1
+log_bin                       = mysql-bin
+binlog_expire_logs_seconds    = 86400
+binlog_format                 = row
