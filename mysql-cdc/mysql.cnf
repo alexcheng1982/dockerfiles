@@ -1,0 +1,5 @@
+[mysqld]
+server-id                   = 1
+log_bin                     = mysql-bin
+binlog_expire_logs_seconds  = 86400
+binlog_format               = row
