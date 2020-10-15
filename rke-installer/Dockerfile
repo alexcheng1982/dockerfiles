@@ -41,4 +41,9 @@ RUN echo "===> Installing sudo to emulate normal OS behavior..."  && \
 RUN pip3 install boto3 && \
   pip3 install boto
 
+RUN curl -LSs https://github.com/roboll/helmfile/releases/download/v0.131.0/helmfile_linux_amd64 > /usr/local/bin/helmfile
+RUN chmod +x /usr/local/bin/helmfile
+
+RUN helm plugin install https://github.com/databus23/helm-diff
+
 WORKDIR /etc/ansible 
