@@ -1,10 +1,10 @@
-FROM dtzar/helm-kubectl:2.14.3
+FROM dtzar/helm-kubectl:3.3.4
 
-RUN curl -LSs https://github.com/rancher/rke/releases/download/v0.3.1/rke_linux-amd64 > /usr/local/bin/rke
+RUN curl -LSs https://github.com/rancher/rke/releases/download/v1.1.9/rke_linux-amd64 > /usr/local/bin/rke
 RUN chmod +x /usr/local/bin/rke
 
-ENV ISTIO_VERSION=1.4.3
-RUN curl -L https://github.com/istio/istio/releases/download/${ISTIO_VERSION}/istio-${ISTIO_VERSION}-linux.tar.gz | tar xz -C /etc
+ENV ISTIO_VERSION=1.7.3
+RUN curl -L https://github.com/istio/istio/releases/download/${ISTIO_VERSION}/istio-${ISTIO_VERSION}-linux-amd64.tar.gz | tar xz -C /etc
 ENV PATH "/etc/istio-${ISTIO_VERSION}/bin:${PATH}"
 
 RUN echo "===> Installing sudo to emulate normal OS behavior..."  && \
