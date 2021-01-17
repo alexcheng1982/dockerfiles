@@ -1,6 +1,6 @@
-FROM dtzar/helm-kubectl:3.3.4
+FROM dtzar/helm-kubectl:3.5.0
 
-RUN curl -LSs https://github.com/rancher/rke/releases/download/v1.1.9/rke_linux-amd64 > /usr/local/bin/rke
+RUN curl -LSs https://github.com/rancher/rke/releases/download/v1.2.4/rke_linux-amd64 > /usr/local/bin/rke
 RUN chmod +x /usr/local/bin/rke
 
 ENV ISTIO_VERSION=1.7.3
@@ -41,7 +41,7 @@ RUN echo "===> Installing sudo to emulate normal OS behavior..."  && \
 RUN pip3 install boto3 && \
   pip3 install boto
 
-RUN curl -LSs https://github.com/roboll/helmfile/releases/download/v0.131.0/helmfile_linux_amd64 > /usr/local/bin/helmfile
+RUN curl -LSs https://github.com/roboll/helmfile/releases/download/v0.137.0/helmfile_linux_amd64 > /usr/local/bin/helmfile
 RUN chmod +x /usr/local/bin/helmfile
 
 RUN helm plugin install https://github.com/databus23/helm-diff
