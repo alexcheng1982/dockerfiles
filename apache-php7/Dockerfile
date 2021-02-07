@@ -43,10 +43,10 @@ ENV PHP_EXTRA_CONFIGURE_ARGS --with-apxs2
 
 ENV GPG_KEYS A917B1ECDA84AEC2B568FED6F50ABC807BD5DCD0 528995BFEDFBA7191D46839EF9BA0ADA31CBD89E
 
-ENV PHP_VERSION 7.1.11
-ENV PHP_FILENAME php-7.1.11.tar.xz
+ENV PHP_VERSION 7.3.10
+ENV PHP_FILENAME php-7.3.10.tar.xz
 ENV PHP_SHA256 074093e9d7d21afedc5106904218a80a47b854abe368d2728ed22184c884893e
-ENV PHP_URL="https://secure.php.net/get/$PHP_FILENAME/from/this/mirror" PHP_ASC_URL="https://secure.php.net/get/php-7.1.11.tar.xz.asc/from/this/mirror"
+ENV PHP_URL="https://secure.php.net/get/$PHP_FILENAME/from/this/mirror" PHP_ASC_URL="https://secure.php.net/get/php-7.3.10.tar.xz.asc/from/this/mirror"
 
 
 RUN set -xe \
